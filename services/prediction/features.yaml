@@ -1,1 +1,5 @@
 namespace: prediction
+flags:
+- key: chat-enabled
+  name: chat-enabled
+  enabled: true
