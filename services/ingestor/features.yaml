@@ -1,0 +1,6 @@
+namespace: ingestor
+flags:
+- key: ingestFromDiscord
+  name: Ingest From Discord
+  description: This flag controls whether or not the ingestor pulls documents from Discord.
+  enabled: true

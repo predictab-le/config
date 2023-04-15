@@ -1,0 +1,14 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  namespace: prediction
+  name: predictd
+spec:
+  template:
+    metadata:
+      namespace: prediction
+      name: predictd
+    spec:
+      containers:
+        - name: predictd
+          image: predictab.le/apps/predictd
