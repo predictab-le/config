@@ -14,7 +14,7 @@ flags:
     rank: 1
     distributions:
     - variant: fromDB
-      rollout: 110
+      rollout: 100
 segments:
 - key: all-users
   name: All Users
