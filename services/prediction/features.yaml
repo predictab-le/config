@@ -2,7 +2,7 @@ namespace: prediction
 flags:
 - key: predictionSource
   name: Prediction Source
-  description: The source of where to draw predictions.
+  description: The backend of where to draw predictions.
   enabled: true
   variants:
   - key: fromDB
@@ -10,8 +10,13 @@ flags:
   - key: fromOpenAI
     name: From OpenAI
   rules:
-  - segment: all-users
+  - segment: internal-users
     rank: 1
+    distributions:
+    - variant: fromOpenAI
+      rollout: 100
+  - segment: all-users
+    rank: 2
     distributions:
     - variant: fromDB
       rollout: 100
@@ -19,4 +24,13 @@ segments:
 - key: all-users
   name: All Users
   description: All Users
+  match_type: ALL_MATCH_TYPE
+- key: internal-users
+  name: Internal Users
+  description: All internal users at predictab.le.
+  constraints:
+  - type: STRING_COMPARISON_TYPE
+    property: organization
+    operator: eq
+    value: predictab.le
   match_type: ALL_MATCH_TYPE
