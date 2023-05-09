@@ -18,4 +18,5 @@ jobs:
         uses: flipt-io/ffs-action@gm/fix-ffs-scan-exit
         with:
           command: validate
+          validate-flipt-image: flipt-io/flipt-private:e925dbb
           github-token: ${{ secrets.PREDICTABLE_PAT }}
