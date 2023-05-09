@@ -1,0 +1,21 @@
+name: Flipt
+on:
+  workflow_dispatch:
+  pull_request:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - "README.md"
+jobs:
+  config-validate:
+    name: Validate Configuration
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Validation Configuration
+        uses: flipt-io/ffs-action@gm/fix-ffs-scan-exit
+        with:
+          command: validate
+          github-token: ${{ secrets.PREDICTABLE_PAT }}
