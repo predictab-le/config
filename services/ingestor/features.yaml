@@ -3,4 +3,4 @@ flags:
 - key: fliptLandingGitOpsBanner
   name: Flipt Landing GitOps Banner
   description: Enables banner on the UI for premium users.
-  enabled: false
+  enabled: true
