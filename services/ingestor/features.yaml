@@ -1,6 +1,6 @@
-namespace: ingestor
+namespace: default
 flags:
-- key: ingestFromDiscord
-  name: Ingest From Discord
-  description: This flag controls whether or not the ingestor pulls documents from Discord.
-  enabled: true
+- key: fliptLandingGitOpsBanner
+  name: Flipt Landing GitOps Banner
+  description: Enables banner on the UI for premium users.
+  enabled: false
