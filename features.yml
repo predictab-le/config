@@ -1,6 +1,7 @@
 flags:
 - key: foo
   name: Foo
+  enabled: true
   variants:
   - key: red
   - key: blue
