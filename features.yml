@@ -1,0 +1,20 @@
+flags:
+- key: foo
+  name: Foo
+  variants:
+  - key: red
+  - key: blue
+  rules:
+  - segment: foobar
+    rank: 1
+    distributions:
+    - variant: blue
+      rollout: 100
+
+segments:
+- key: foobar
+  constraints:
+  - type: STRING_COMPARISON_TYPE
+    property: foobar
+    operator: eq
+    value: foobar
