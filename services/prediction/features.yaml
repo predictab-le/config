@@ -1,22 +1,7 @@
 namespace: prediction
 flags:
-- key: predictionSource
-  name: Prediction Source
-  description: The source of where to draw predictions.
-  enabled: true
-  variants:
-  - key: fromDB
-    name: From Database
-  - key: fromClosedAI
-    name: From ClosedAI
-  rules:
-  - segment: all-users
-    rank: 1
-    distributions:
-    - variant: fromDB
-      rollout: 100
-segments:
-- key: all-users
-  name: All Users
-  description: All Users
-  match_type: ALL_MATCH_TYPE
+- key: useClosedAI
+  name: Use Closed AI
+  type: BOOLEAN_FLAG_TYPE
+  description: Change prediction endpoint to use closed AI.
+  enabled: false
