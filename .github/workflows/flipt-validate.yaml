@@ -15,8 +15,6 @@ jobs:
       - uses: actions/checkout@v3
 
       - name: Validation Configuration
-        uses: flipt-io/ffs-action@main
+        uses: flipt-io/validate-action@optional-github-token
         with:
-          command: validate
-          validate-flipt-image: "flipt-private:e925dbb"
           github-token: ${{ secrets.PREDICTABLE_PAT }}
