@@ -4,4 +4,4 @@ flags:
   name: useClosedAI
   type: BOOLEAN_FLAG_TYPE
   description: Change prediction endpoint to use closed AI.
-  enabled: false
+  enabled: true
